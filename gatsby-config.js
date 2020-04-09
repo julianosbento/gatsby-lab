@@ -1,6 +1,8 @@
+/* eslint-disable quotes */
 module.exports = {
   siteMetadata: {
     title: `My Blog`,
+    position: `Full-Stack Developer`,
     description: `An initial project with gatsby`,
     author: `@julianosb`,
   },
