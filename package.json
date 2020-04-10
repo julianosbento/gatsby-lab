@@ -6,6 +6,9 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@styled-icons/boxicons-logos": "^10.0.0",
+    "@styled-icons/boxicons-regular": "^10.0.0",
+    "@styled-icons/boxicons-solid": "^10.0.0",
+    "@styled-icons/material": "^10.0.0",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-manifest": "^2.2.48",
