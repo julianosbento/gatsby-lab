@@ -9,6 +9,9 @@ const PostsList = () => {
       allMarkdownRemark {
         edges {
           node {
+            fields {
+              slug
+            }
             frontmatter {
               background
               category
@@ -28,12 +31,13 @@ const PostsList = () => {
   const renderPosts = () => postList.map(
     ({
       node: {
+        fields: { slug },
         frontmatter: { background, category, date, description, title },
         timeToRead,
       },
     }) => (
         <PostItem
-          slug="/about/"
+          slug={slug}
           background={background}
           category={category}
           date={date}
