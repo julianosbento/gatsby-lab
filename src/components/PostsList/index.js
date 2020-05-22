@@ -1,34 +1,9 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 
 import PostItem from './PostItem';
 
-const PostsList = () => {
-  const { allMarkdownRemark } = useStaticQuery(graphql`
-    query PostList {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              background
-              category
-              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-              description
-              title
-            }
-            timeToRead
-          }
-        }
-      }
-    }
-  `);
-
-  const postList = allMarkdownRemark.edges;
-
-  const renderPosts = () => postList.map(
+const PostsList = ({ postsList }) => {
+  const renderPosts = () => postsList.map(
     ({
       node: {
         fields: { slug },
